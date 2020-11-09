@@ -1,8 +1,18 @@
 /* Variables */
+$extra-light-color: #fff;
+$light-color: #f7f7f7;
+$medium-color: #777777;
+$dark-color: #222222;
+$accent-color: #fed136;
+$accent-color-h: #deac01;
+
+$main-text: 'Montserrat', sans-serif;
+$extra-text: 'Source Serif Pro', serif;
+$p-text: 'Roboto Slab', serif;
 
 /* Global */
 *, *::before, *::after {
-    box-sizing: border-box;
+        box-sizing: border-box;
 }
 
 body {
@@ -10,6 +20,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.7;
+    font-family: $main-text;
 }
 
 section {
@@ -22,37 +33,108 @@ section {
     margin: 0 auto;
 }
 
+.btn {
+    display: inline-block;
+    min-width: 160px;
+    margin: 24px auto 0 auto;
+    padding: 14px 40px;
+    border-radius: 2px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: $accent-color;
+    color: $extra-light-color;
+    text-transform: uppercase;
+    font-family: $main-text;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: $accent-color-h;
+}
+
 /* Navigation */
-.navigation .container {
-  position: absolute;
-  width: 100%;
-  display: inline-flex;
-  flex-wrap: nowrap;
-  align-item: center;
-  position: fixed;
-  padding: 20px;
+.navigation {
+    background-color: transparent;
+    position: fixed;
+}
+/* dodaj jquery ze podczas scrollowania ma miec background color */
+.navigation .row {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-item: center;
+    position: fixed;
+    padding: 20px 20px 20px 0;
 }
 
 .nav-right {
-  flex: 80%;
-  text-align: right;
-  background-color: transparent;
+    flex: 80%;
+    text-align: right;
 }
 
 .nav-left {
-  flex: 20%;
-  text-align: left;
-  background-color: transparent;
+    flex: 20%;
+    text-align: left;
 }
 
-.container a {
-  color: yellow;
+.navigation a {
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 14px 14px 0;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 14px;
 }
 
-.nav-right a:hover {
-  color: black;
+.nav-right a {
+    text-transform: uppercase;
+    color: $extra-light-color;
+}
+
+.nav-left a {
+    font-family: $extra-text;
+    color: $accent-color;
+    font-size: 20px;
+}
+
+.nav-right a:hover, .nav-left a:hover {
+    color: $accent-color-h;
+}
+
+/* Splash */
+.splash {
+    height: 100vh;
+    position: relative;
+    background-image: url('https://images.pexels.com/photos/3892369/pexels-photo-3892369.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    top: -35px;
+    z-index: -1;
+}
+
+.splash-inner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.page-subtitle {
+    font-family: $extra-text;
+    color: $extra-light-color;
+    font-size: 40px;
+    margin: 0;
+}
+
+.page-title {
+    font-family: $main-text;
+    color: $extra-light-color;
+    font-size: 76px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
 }

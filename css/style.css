@@ -9,6 +9,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
+  font-family: "Montserrat", sans-serif;
 }
 
 section {
@@ -21,42 +22,114 @@ section {
   margin: 0 auto;
 }
 
+.btn {
+  display: inline-block;
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 14px 40px;
+  border-radius: 2px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #fed136;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #deac01;
+}
+
 /* Navigation */
-.navigation .container {
-  position: absolute;
+.navigation {
+  background-color: transparent;
+  position: fixed;
+}
+
+/* dodaj jquery ze podczas scrollowania ma miec background color */
+.navigation .row {
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   align-item: center;
   position: fixed;
-  padding: 20px;
+  padding: 20px 20px 20px 0;
 }
 
 .nav-right {
   -ms-flex: 80%;
       flex: 80%;
   text-align: right;
-  background-color: transparent;
 }
 
 .nav-left {
   -ms-flex: 20%;
       flex: 20%;
   text-align: left;
-  background-color: transparent;
 }
 
-.container a {
-  color: yellow;
+.navigation a {
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 14px 14px 0;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 14px;
 }
 
-.nav-right a:hover {
-  color: black;
+.nav-right a {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.nav-left a {
+  font-family: "Source Serif Pro", serif;
+  color: #fed136;
+  font-size: 20px;
+}
+
+.nav-right a:hover, .nav-left a:hover {
+  color: #deac01;
+}
+
+/* Splash */
+.splash {
+  height: 100vh;
+  position: relative;
+  background-image: url("https://images.pexels.com/photos/3892369/pexels-photo-3892369.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  top: -35px;
+  z-index: -1;
+}
+
+.splash-inner {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.page-subtitle {
+  font-family: "Source Serif Pro", serif;
+  color: #fff;
+  font-size: 40px;
+  margin: 0;
+}
+
+.page-title {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 76px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
